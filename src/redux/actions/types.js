@@ -1,0 +1,4 @@
+export const GET_VIDEOS_LIST = "GET_VIDEOS_LIST";
+export const SET_VIDEOS_LIST = "SET_VIDEOS_LIST";
+export const GET_VIDEO_INFO = "GET_VIDEO_INFO";
+export const SET_VIDEO_INFO = "SET_VIDEO_INFO";
