@@ -1,13 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
-const style = {
-    display: "flex",
-    justifyContent: "space-around",
-    direction: "row",
-    width: "300px",
-    alignItems: "center",
-    cursor: "pointer"
-}
+import { Box, Grid, Typography, Card, CardContent } from "@material-ui/core";
+import "./style.scss"
 
 function VideosListItem({ title, path, id }) {
     const history = useHistory();
@@ -15,10 +9,21 @@ function VideosListItem({ title, path, id }) {
         history.push(`/player/${id}`)
     }
     return (
-        <div style={style} onClick={openVideo}>
-            <img src={path} alt="thumbnail" />
-            <p>{title}</p>
-        </div>
+        <Box className="list-container" onClick={openVideo} >
+            <Card className="list-item">
+                <CardContent>
+                    <Grid container direction="row" wrap="nowrap" justify="space-around">
+                        <Grid item>
+                            <img src={path} alt="thumbnail" />
+                        </Grid>
+                        <Grid item>
+                            <Typography className="title" variant="body1">{title}</Typography>
+                        </Grid>
+                    </Grid>
+                </CardContent>
+            </Card>
+        </Box>
+
 
     );
 }

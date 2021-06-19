@@ -1,4 +1,4 @@
-import { all, takeEvery, call, put, select } from 'redux-saga/effects';
+import { all, takeEvery, put, select } from 'redux-saga/effects';
 import { setVideoInfo, setVideos } from "../actions/actions"
 import { GET_VIDEOS_LIST, GET_VIDEO_INFO } from "../actions/types";
 const videoListURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCP_IYZTiqbmUqmI3KXHIEoQ&key=${process.env.REACT_APP_TOKEN_API}&maxResults=50`;

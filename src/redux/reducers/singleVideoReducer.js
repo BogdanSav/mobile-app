@@ -2,7 +2,11 @@ import { SET_VIDEO_INFO, GET_VIDEO_INFO } from "../actions/types";
 
 const initialState = {
     videoID: "",
-    videoInfo: {}
+    videoInfo: {
+        title: "",
+        desc: "",
+        stats: {}
+    }
 };
 
 function singleVideoReducer(state = initialState, action) {
